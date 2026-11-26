@@ -40,6 +40,11 @@ The default icon is Claude's icon with a badge drawn by `icon/badge-icon.swift`.
 The badge is any [SF Symbol](https://developer.apple.com/sf-symbols/) name.
 The first Swift run takes about 30 seconds.
 
+> **The custom icon is for the launcher only, not the running app.**
+> You see it in Finder, Spotlight and Launchpad. Once the profile instance is running, its Dock and
+> app-switcher icon is Claude's own, the same as the default instance. Tell them apart by the account
+> shown inside the window.
+
 Re-running the script is safe. It replaces the launcher and leaves the data folders alone.
 
 ## Limits
@@ -50,6 +55,11 @@ Re-running the script is safe. It replaces the launcher and leaves the data fold
   Use email-code sign-in, or quit the default instance while you sign in.
 - **Empty config:** `~/.claude-<profile>` starts empty. Copy in the CLAUDE.md, skills or settings you want.
 - Claude updates need no rebuild: the launcher opens the app by bundle ID.
+- **Unofficial:** `--user-data-dir` and `CLAUDE_CONFIG_DIR` are not documented for the desktop app. A Claude update could break this.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
 
 ## Remove a profile
 
